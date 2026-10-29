@@ -3,11 +3,11 @@ chcp 65001 >nul
 setlocal EnableExtensions
 cd /d "%~dp0"
 
-title PC Workbench Launcher
+title 3D Build Lab Launcher
 
 echo.
 echo ============================================================
-echo   PC Workbench - Local Preview Launcher
+echo   3D Build Lab - Local Preview Launcher
 echo ============================================================
 echo.
 
@@ -70,7 +70,7 @@ echo [OK] Using port %PORT%
 rem ------------------------------------------------------------
 rem 3. Start the static server in a separate minimized window
 rem ------------------------------------------------------------
-start "PC Workbench Server" /min cmd /k "%PY_CMD% -m http.server %PORT% --bind 127.0.0.1"
+start "3D Build Lab Server" /min cmd /k "%PY_CMD% -m http.server %PORT% --bind 127.0.0.1"
 timeout /t 2 /nobreak >nul
 
 call :PortInUse %PORT%

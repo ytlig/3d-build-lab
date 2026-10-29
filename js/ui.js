@@ -44,7 +44,7 @@ export function createUI(config, engine) {
     document.body.dataset.theme = config.theme || config.id;
     const ui = config.ui || {};
     setText("brand-title", config.brand?.title || config.name);
-    setText("brand-sub", config.brand?.sub || "拆装工作台");
+    setText("brand-sub", config.brand?.sub || "拆装实验室");
     setText("part-count", String(config.parts.length).padStart(2, "0"));
     setText("toggle-count", String(config.parts.length).padStart(2, "0"));
     setText("count-label", ui.countLabel || "PARTS");
@@ -58,7 +58,7 @@ export function createUI(config, engine) {
     setText("boot-title", ui.bootTitle || config.name.toUpperCase());
     setText("boot-sub", ui.bootSub || "程序化拆解系统");
     setText("boot-status-text", ui.bootStatus || "正在构建几何体");
-    document.title = `${config.name} · 拆装工作台`;
+    document.title = `${config.name} · 拆装实验室`;
     const canvas = $("scene-canvas");
     if (canvas) canvas.setAttribute("aria-label", ui.canvasLabel || `${config.name} 三维拆解视图`);
   }

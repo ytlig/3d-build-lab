@@ -7,10 +7,10 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <meta name="description" content="拆装工作台：主板与整机的 3D 拆解，以及装机配置器（选配件、看兼容与价格）。">
+  <meta name="description" content="3D 拆装实验室：主板与整机的 3D 拆解，以及装机配置器（选配件、看兼容与价格）。">
   <link rel="icon" href="data:,">
-  <title>拆装工作台 · PC WORKBENCH</title>
-  <link rel="stylesheet" href="css/home.css?v=20261029-5">
+  <title>拆装实验室 · 3D BUILD LAB</title>
+  <link rel="stylesheet" href="css/home.css?v=20261029-6">
 </head>
 <body>
   <div class="home-atmosphere" aria-hidden="true">
@@ -21,10 +21,10 @@
   </div>
 
   <header class="home-topbar">
-    <a class="home-brand" href="index.html" aria-label="拆装工作台首页">
+    <a class="home-brand" href="index.html" aria-label="3D 拆装实验室首页">
       <span class="home-brand-copy">
-        <strong>PC WORKBENCH</strong>
-        <small>拆装工作台 · 主板与整机</small>
+        <strong>3D BUILD LAB</strong>
+        <small>拆装实验室 · 主板与整机</small>
       </span>
     </a>
     <div class="home-status"><i></i> WebGL 实时 · 免安装</div>
@@ -71,7 +71,7 @@
   <noscript><div class="home-noscript">需要启用 JavaScript 以加载产品目录。</div></noscript>
 
   <script type="module">
-    import { products } from "./configs/index.js?v=20261029-5";
+    import { products } from "./configs/index.js?v=20261029-6";
 
     const totalParts = products.reduce((sum, product) => sum + (product.partCount || 0), 0);
     document.getElementById("hero-products").textContent = products.length;
