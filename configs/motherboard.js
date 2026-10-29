@@ -332,7 +332,7 @@ export default {
   name: "ATX 主板",
   category: "PC 硬件",
   isPremium: false,
-  thumbnail: "assets/motherboard.png",
+  thumbnail: "assets/motherboard.webp",
   theme: "motherboard",
   brand: {
     mark: "ATX",

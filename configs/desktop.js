@@ -353,7 +353,7 @@ export default {
   name: "ATX 完整主机",
   category: "整机方案",
   isPremium: true,
-  thumbnail: "assets/desktop.png",
+  thumbnail: "assets/desktop.webp",
   theme: "desktop",
   model: "DesktopModel",
   brand: {

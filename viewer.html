@@ -7,7 +7,7 @@
   <meta name="description" content="可扩展的 Three.js 产品拆解展示引擎：ATX 主板与完整主机。">
   <link rel="icon" href="data:,">
   <title>拆装实验室 · 3D BUILD LAB</title>
-  <link rel="stylesheet" href="css/viewer.css?v=20261029-6">
+  <link rel="stylesheet" href="css/viewer.css?v=20261029-7">
 </head>
 <body data-product="motherboard" data-theme="motherboard">
   <script>
@@ -168,16 +168,16 @@
   </main>
 
   <!-- Shared local Three.js r160 runtime: no CDN and no import map. -->
-  <script src="vendor/three.bundle.js?v=20261029-6"></script>
+  <script src="vendor/three.bundle.js?v=20261029-7"></script>
   <script>window.THREE = window.ATX_LIB.THREE;</script>
-  <script src="models/env.js?v=20261029-6"></script>
+  <script src="models/env.js?v=20261029-7"></script>
 
   <!-- Product-specific procedural builders. Configs reference these factories. -->
-  <script src="models/motherboard.js?v=20261029-6"></script>
-  <script src="models/desktop.js?v=20261029-6"></script>
+  <script src="models/motherboard.js?v=20261029-7"></script>
+  <script src="models/desktop.js?v=20261029-7"></script>
 
   <script type="module">
-    import { loadProduct } from "./js/loader.js?v=20261029-6";
+    import { loadProduct } from "./js/loader.js?v=20261029-7";
 
     const id = new URLSearchParams(location.search).get("id") || "motherboard";
     loadProduct(id).catch((error) => {

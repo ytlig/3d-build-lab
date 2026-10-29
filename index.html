@@ -10,7 +10,7 @@
   <meta name="description" content="3D 拆装实验室：主板与整机的 3D 拆解，以及装机配置器（选配件、看兼容与价格）。">
   <link rel="icon" href="data:,">
   <title>拆装实验室 · 3D BUILD LAB</title>
-  <link rel="stylesheet" href="css/home.css?v=20261029-6">
+  <link rel="stylesheet" href="css/home.css?v=20261029-7">
 </head>
 <body>
   <div class="home-atmosphere" aria-hidden="true">
@@ -71,7 +71,7 @@
   <noscript><div class="home-noscript">需要启用 JavaScript 以加载产品目录。</div></noscript>
 
   <script type="module">
-    import { products } from "./configs/index.js?v=20261029-6";
+    import { products } from "./configs/index.js?v=20261029-7";
 
     const totalParts = products.reduce((sum, product) => sum + (product.partCount || 0), 0);
     document.getElementById("hero-products").textContent = products.length;
@@ -83,7 +83,7 @@
          aria-label="打开 ${product.name} 拆解视图">
         <span class="card-index">${String(index + 1).padStart(2, "0")}</span>
         <span class="card-media">
-          <img src="${product.thumbnail}" alt="${product.name} 拆解预览" loading="${index === 0 ? "eager" : "lazy"}">
+          <img src="${product.thumbnail}" alt="${product.name} 拆解预览" width="1600" height="1000" decoding="async" fetchpriority="${index === 0 ? "high" : "auto"}" loading="${index === 0 ? "eager" : "lazy"}">
           <span class="card-media-scan"></span>
           <span class="card-open">打开${product.scope} <b>↗</b></span>
         </span>
