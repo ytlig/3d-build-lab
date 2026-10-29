@@ -1,0 +1,231 @@
+[
+  {
+    "id": "peerless-assassin-120-se",
+    "name": "Peerless Assassin 120 SE",
+    "brand": "Thermalright",
+    "specs": {
+      "类型": "双塔风冷",
+      "高度": "155mm",
+      "风扇数": "2",
+      "支持平台": "LGA1700 / AM5"
+    },
+    "compat": {
+      "socket": [
+        "LGA1700",
+        "LGA1200",
+        "LGA115x",
+        "AM5",
+        "AM4"
+      ],
+      "height": 155,
+      "memoryClearance": 42
+    },
+    "modelParams": {
+      "height": 155,
+      "type": "tower",
+      "fanCount": 2,
+      "radiatorSize": 0,
+      "radiatorPosition": null,
+      "radiatorThickness": 0,
+      "radiatorFanThickness": 0
+    },
+    "price": 179,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "nh-d15",
+    "name": "NH-D15",
+    "brand": "Noctua",
+    "specs": {
+      "类型": "双塔风冷",
+      "高度": "165mm",
+      "风扇数": "2",
+      "支持平台": "LGA1700 / AM5"
+    },
+    "compat": {
+      "socket": [
+        "LGA1700",
+        "LGA1200",
+        "LGA115x",
+        "AM5",
+        "AM4"
+      ],
+      "height": 165,
+      "memoryClearance": 32
+    },
+    "modelParams": {
+      "height": 165,
+      "type": "tower",
+      "fanCount": 2,
+      "radiatorSize": 0,
+      "radiatorPosition": null,
+      "radiatorThickness": 0,
+      "radiatorFanThickness": 0
+    },
+    "price": 749,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "nh-l9i-17xx",
+    "name": "NH-L9i-17xx",
+    "brand": "Noctua",
+    "specs": {
+      "类型": "下压风冷",
+      "高度": "37mm",
+      "风扇数": "1",
+      "支持平台": "LGA1700"
+    },
+    "compat": {
+      "socket": [
+        "LGA1700"
+      ],
+      "height": 37,
+      "memoryClearance": 65
+    },
+    "modelParams": {
+      "height": 37,
+      "type": "low-profile",
+      "fanCount": 1,
+      "radiatorSize": 0,
+      "radiatorPosition": null,
+      "radiatorThickness": 0,
+      "radiatorFanThickness": 0
+    },
+    "price": 399,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "ak620",
+    "name": "AK620",
+    "brand": "DeepCool",
+    "specs": {
+      "类型": "双塔风冷",
+      "高度": "160mm",
+      "风扇数": "2",
+      "支持平台": "LGA1700 / AM5"
+    },
+    "compat": {
+      "socket": [
+        "LGA1700",
+        "LGA1200",
+        "LGA115x",
+        "AM5",
+        "AM4"
+      ],
+      "height": 160,
+      "memoryClearance": 43
+    },
+    "modelParams": {
+      "height": 160,
+      "type": "tower",
+      "fanCount": 2,
+      "radiatorSize": 0,
+      "radiatorPosition": null,
+      "radiatorThickness": 0,
+      "radiatorFanThickness": 0
+    },
+    "price": 299,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "lt720",
+    "name": "LT720 360",
+    "brand": "DeepCool",
+    "specs": {
+      "类型": "一体式水冷",
+      "高度": "55mm",
+      "风扇数": "3",
+      "支持平台": "LGA1700 / AM5"
+    },
+    "compat": {
+      "socket": [
+        "LGA1700",
+        "LGA1200",
+        "LGA115x",
+        "AM5",
+        "AM4"
+      ],
+      "height": 55,
+      "memoryClearance": 60
+    },
+    "modelParams": {
+      "height": 55,
+      "type": "liquid",
+      "fanCount": 3,
+      "radiatorSize": 360,
+      "radiatorPosition": null,
+      "radiatorThickness": 27,
+      "radiatorFanThickness": 25
+    },
+    "price": 899,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "lt520",
+    "name": "LT520 240",
+    "brand": "DeepCool",
+    "specs": {
+      "类型": "一体式水冷",
+      "高度": "55mm",
+      "冷排": "240mm",
+      "风扇数": "2",
+      "支持平台": "LGA1700 / AM5"
+    },
+    "compat": {
+      "socket": [
+        "LGA1700",
+        "LGA1200",
+        "LGA115x",
+        "AM5",
+        "AM4"
+      ],
+      "height": 55,
+      "memoryClearance": 60
+    },
+    "modelParams": {
+      "height": 55,
+      "type": "liquid",
+      "fanCount": 2,
+      "radiatorSize": 240,
+      "radiatorPosition": null,
+      "radiatorThickness": 27,
+      "radiatorFanThickness": 25
+    },
+    "price": 599,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "coreliquid-280r",
+    "name": "MAG CORELIQUID 280R",
+    "brand": "MSI",
+    "specs": {
+      "类型": "一体式水冷",
+      "高度": "55mm",
+      "冷排": "280mm",
+      "风扇数": "2",
+      "支持平台": "LGA1700 / AM5"
+    },
+    "compat": {
+      "socket": [
+        "LGA1700",
+        "LGA1200",
+        "LGA115x",
+        "AM5",
+        "AM4"
+      ],
+      "height": 55,
+      "memoryClearance": 60
+    },
+    "modelParams": {
+      "height": 55,
+      "type": "liquid",
+      "fanCount": 2,
+      "radiatorSize": 280,
+      "radiatorPosition": null,
+      "radiatorThickness": 27,
+      "radiatorFanThickness": 25
+    },
+    "price": 799,
+    "fidelity": "proportional"
+  }
+]

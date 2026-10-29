@@ -1,0 +1,163 @@
+[
+  {
+    "id": "i5-14600k",
+    "name": "Core i5-14600K",
+    "brand": "Intel",
+    "specs": {
+      "核心/线程": "14C / 20T",
+      "频率": "3.5–5.3GHz",
+      "功耗": "125W",
+      "插槽": "LGA1700"
+    },
+    "compat": {
+      "socket": "LGA1700",
+      "powerWatt": 125,
+      "memoryType": "DDR5"
+    },
+    "modelParams": {
+      "cores": 14,
+      "threads": 20,
+      "socket": "LGA1700"
+    },
+    "price": 2199,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "i7-14700k",
+    "name": "Core i7-14700K",
+    "brand": "Intel",
+    "specs": {
+      "核心/线程": "20C / 28T",
+      "频率": "3.4–5.6GHz",
+      "功耗": "125W / 253W 睿频",
+      "插槽": "LGA1700"
+    },
+    "compat": {
+      "socket": "LGA1700",
+      "powerWatt": 253,
+      "memoryType": "DDR5"
+    },
+    "modelParams": {
+      "cores": 20,
+      "threads": 28,
+      "socket": "LGA1700"
+    },
+    "price": 2899,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "i9-14900k",
+    "name": "Core i9-14900K",
+    "brand": "Intel",
+    "specs": {
+      "核心/线程": "24C / 32T",
+      "频率": "3.2–6.0GHz",
+      "功耗": "125W / 253W 睿频",
+      "插槽": "LGA1700"
+    },
+    "compat": {
+      "socket": "LGA1700",
+      "powerWatt": 253,
+      "memoryType": "DDR5"
+    },
+    "modelParams": {
+      "cores": 24,
+      "threads": 32,
+      "socket": "LGA1700"
+    },
+    "price": 4299,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "r7-7800x3d",
+    "name": "Ryzen 7 7800X3D",
+    "brand": "AMD",
+    "specs": {
+      "核心/线程": "8C / 16T",
+      "频率": "4.2–5.0GHz",
+      "功耗": "120W",
+      "插槽": "AM5"
+    },
+    "compat": {
+      "socket": "AM5",
+      "powerWatt": 120,
+      "memoryType": "DDR5"
+    },
+    "modelParams": {
+      "cores": 8,
+      "threads": 16,
+      "socket": "AM5"
+    },
+    "price": 2699,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "r5-7600",
+    "name": "Ryzen 5 7600",
+    "brand": "AMD",
+    "specs": {
+      "核心/线程": "6C / 12T",
+      "频率": "3.8–5.1GHz",
+      "功耗": "65W",
+      "插槽": "AM5"
+    },
+    "compat": {
+      "socket": "AM5",
+      "powerWatt": 65,
+      "memoryType": "DDR5"
+    },
+    "modelParams": {
+      "cores": 6,
+      "threads": 12,
+      "socket": "AM5"
+    },
+    "price": 1399,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "i3-14100",
+    "name": "Core i3-14100",
+    "brand": "Intel",
+    "specs": {
+      "核心/线程": "4C / 8T",
+      "频率": "3.5–4.7GHz",
+      "功耗": "58W",
+      "插槽": "LGA1700"
+    },
+    "compat": {
+      "socket": "LGA1700",
+      "powerWatt": 58,
+      "memoryType": "DDR5"
+    },
+    "modelParams": {
+      "cores": 4,
+      "threads": 8,
+      "socket": "LGA1700"
+    },
+    "price": 999,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "r9-7950x",
+    "name": "Ryzen 9 7950X",
+    "brand": "AMD",
+    "specs": {
+      "核心/线程": "16C / 32T",
+      "频率": "4.5–5.7GHz",
+      "功耗": "170W",
+      "插槽": "AM5"
+    },
+    "compat": {
+      "socket": "AM5",
+      "powerWatt": 170,
+      "memoryType": "DDR5"
+    },
+    "modelParams": {
+      "cores": 16,
+      "threads": 32,
+      "socket": "AM5"
+    },
+    "price": 3599,
+    "fidelity": "proportional"
+  }
+]

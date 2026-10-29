@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#04080a">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="description" content="拆装工作台：主板与整机的 3D 拆解，以及装机配置器（选配件、看兼容与价格）。">
+  <link rel="icon" href="data:,">
+  <title>拆装工作台 · PC WORKBENCH</title>
+  <link rel="stylesheet" href="css/home.css?v=20261029-5">
+</head>
+<body>
+  <div class="home-atmosphere" aria-hidden="true">
+    <span class="home-glow home-glow-cyan"></span>
+    <span class="home-glow home-glow-amber"></span>
+    <span class="home-grid"></span>
+    <span class="home-noise"></span>
+  </div>
+
+  <header class="home-topbar">
+    <a class="home-brand" href="index.html" aria-label="拆装工作台首页">
+      <span class="home-brand-copy">
+        <strong>PC WORKBENCH</strong>
+        <small>拆装工作台 · 主板与整机</small>
+      </span>
+    </a>
+    <div class="home-status"><i></i> WebGL 实时 · 免安装</div>
+  </header>
+
+  <main class="home-main">
+    <section class="home-hero">
+      <div class="hero-eyebrow"><span>PRODUCT ARCHIVE</span><span class="hero-rule"></span></div>
+      <h1>拆开看结构<br><em>装机看搭配</em></h1>
+      <p>拖动旋转、点击拆解；或在配置器里挑九个品类，实时看兼容与价格。</p>
+      <div class="hero-meta">
+        <span><b id="hero-products">2</b> 可拆样机</span>
+        <span><b id="hero-parts">31</b> 可拆部件</span>
+        <span><b>9</b> 类配件</span>
+      </div>
+    </section>
+
+    <section id="product-grid" class="product-grid" aria-label="产品列表"></section>
+
+    <section class="configurator-entry" aria-label="装机配置器">
+      <a class="configurator-card" href="configurator.html">
+        <span class="configurator-copy">
+          <span class="configurator-kicker">CONFIGURATOR</span>
+          <strong>装机配置器</strong>
+          <span class="configurator-desc">从九个品类里选出整套配置，实时看兼容、价格与整机装配效果。</span>
+          <span class="configurator-tags">
+            <i>9 类配件</i><i>18 项兼容检查</i><i>参考总价</i>
+          </span>
+          <span class="configurator-cta">打开配置器 <b>↗</b></span>
+        </span>
+        <span class="configurator-schematic" aria-hidden="true">
+          <span class="schematic-glow"></span>
+          <span class="schematic-grid">
+            <i>显卡</i><i>CPU</i><i>主板</i>
+            <i>散热</i><i>内存</i><i>存储</i>
+            <i>电源</i><i>机箱风扇</i><i>机箱</i>
+          </span>
+          <span class="schematic-line"></span>
+        </span>
+      </a>
+    </section>
+  </main>
+
+  <noscript><div class="home-noscript">需要启用 JavaScript 以加载产品目录。</div></noscript>
+
+  <script type="module">
+    import { products } from "./configs/index.js?v=20261029-5";
+
+    const totalParts = products.reduce((sum, product) => sum + (product.partCount || 0), 0);
+    document.getElementById("hero-products").textContent = products.length;
+    document.getElementById("hero-parts").textContent = totalParts;
+
+    const grid = document.getElementById("product-grid");
+    grid.innerHTML = products.map((product, index) => `
+      <a class="product-card" href="viewer.html?id=${encodeURIComponent(product.id)}"
+         aria-label="打开 ${product.name} 拆解视图">
+        <span class="card-index">${String(index + 1).padStart(2, "0")}</span>
+        <span class="card-media">
+          <img src="${product.thumbnail}" alt="${product.name} 拆解预览" loading="${index === 0 ? "eager" : "lazy"}">
+          <span class="card-media-scan"></span>
+          <span class="card-open">打开${product.scope} <b>↗</b></span>
+        </span>
+        <span class="card-body">
+          <span class="card-kicker">${product.category} · ${String(product.partCount).padStart(2, "0")} 部件</span>
+          <strong class="card-title">${product.name}</strong>
+          <span class="card-tagline">${product.tagline}</span>
+          <span class="card-desc">${product.description}</span>
+        </span>
+      </a>
+    `).join("");
+  </script>
+</body>
+</html>

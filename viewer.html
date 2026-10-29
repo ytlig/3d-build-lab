@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#04080a">
+  <meta name="description" content="可扩展的 Three.js 产品拆解展示引擎：ATX 主板与完整主机。">
+  <link rel="icon" href="data:,">
+  <title>拆装工作台 · PC WORKBENCH</title>
+  <link rel="stylesheet" href="css/viewer.css?v=20261029-5">
+</head>
+<body data-product="motherboard" data-theme="motherboard">
+  <script>
+    (function () {
+      var raw = new URLSearchParams(location.search).get("id");
+      var id = ["motherboard", "desktop"].indexOf(raw) >= 0 ? raw : "motherboard";
+      document.body.dataset.product = id;
+      document.body.dataset.theme = id;
+      window.__VIEWER_READY__ = false;
+      window.addEventListener("error", function () {
+        if (window.__VIEWER_READY__) return;
+        var status = document.getElementById("boot-status-text");
+        if (status) status.textContent = "渲染初始化异常，请检查 WebGL 支持";
+      });
+      window.setTimeout(function () {
+        if (window.__VIEWER_READY__) return;
+        var boot = document.getElementById("boot");
+        var status = document.getElementById("boot-status-text");
+        if (boot) boot.classList.add("is-error");
+        if (status) status.textContent = "初始化超时，请检查浏览器 WebGL 支持 / 模型脚本";
+      }, 10000);
+    })();
+  </script>
+
+  <main id="app" class="app">
+    <canvas id="scene-canvas" aria-label="产品三维拆解视图"></canvas>
+    <div id="css2d-layer" aria-hidden="true"></div>
+
+    <div class="atmosphere" aria-hidden="true">
+      <div class="glow glow-cyan"></div>
+      <div class="glow glow-amber"></div>
+      <div class="stage-grid"></div>
+      <div class="stage-noise"></div>
+      <div class="stage-vignette"></div>
+    </div>
+
+    <header class="topbar">
+      <a id="brand" class="brand" href="index.html" aria-label="返回产品库">
+        <div class="brand-mark back-mark" aria-hidden="true">←</div>
+        <span class="brand-divider" aria-hidden="true"></span>
+        <div class="brand-copy">
+          <div id="brand-title" class="brand-title">MOTHERBOARD / 09</div>
+          <div id="brand-sub" class="brand-sub">整机拆解视图</div>
+        </div>
+      </a>
+
+      <div class="top-actions">
+        <div class="status-chip">
+          <span class="status-dot"></span>
+          <span>WEBGL LIVE</span>
+        </div>
+        <button id="parts-toggle" class="parts-toggle" type="button" aria-controls="parts-panel" aria-expanded="false">
+          <span class="panel-toggle-glyph" aria-hidden="true">≡</span>
+          <span>部件清单</span>
+          <span id="toggle-count" class="count-pill">09</span>
+        </button>
+      </div>
+    </header>
+
+    <div id="mode-hud" class="mode-hud" aria-live="polite">
+      <span class="hud-line" aria-hidden="true"></span>
+      <span class="hud-label">状态</span>
+      <span id="mode-value" class="hud-value">ASSEMBLED</span>
+      <span id="mode-cn" class="hud-cn">整机装配</span>
+      <span class="hud-led" aria-hidden="true"></span>
+    </div>
+
+    <aside id="parts-panel" class="panel left-panel" aria-label="部件清单">
+      <div class="panel-head">
+        <div class="eyebrow"><span class="accent">COMPONENT INDEX</span><span class="eyebrow-line"></span></div>
+        <div class="panel-title-row">
+          <h2 class="panel-title">部件清单</h2>
+          <div class="panel-count"><span id="part-count">09</span><small id="count-label">MODULES</small></div>
+        </div>
+      </div>
+      <div id="parts-list" class="parts-list" role="listbox" aria-label="可选部件"></div>
+      <div class="glow-strip" id="glow-card" aria-label="灯效" hidden>
+        <span class="glow-label">灯效</span>
+        <button class="glow-swatch is-off" type="button" data-glow="off" aria-pressed="true" title="关闭灯效" aria-label="关闭灯效"></button>
+        <button class="glow-swatch" type="button" data-glow="#ffa04a" style="--swatch:#ffa04a" aria-pressed="false" title="琥珀" aria-label="琥珀灯效"></button>
+        <button class="glow-swatch" type="button" data-glow="#5fe7ff" style="--swatch:#5fe7ff" aria-pressed="false" title="青" aria-label="青色灯效"></button>
+        <button class="glow-swatch" type="button" data-glow="#b47cff" style="--swatch:#b47cff" aria-pressed="false" title="紫" aria-label="紫色灯效"></button>
+        <button class="glow-swatch" type="button" data-glow="#ff5c6e" style="--swatch:#ff5c6e" aria-pressed="false" title="红" aria-label="红色灯效"></button>
+        <button class="glow-breath" id="glow-breath" type="button" aria-pressed="false" title="呼吸模式">呼吸</button>
+        <span class="glow-mode" id="glow-mode-label">原始</span>
+      </div>
+    </aside>
+
+    <aside id="detail-panel" class="panel right-panel" aria-label="部件详情" aria-live="polite">
+      <div class="panel-head">
+        <div class="eyebrow"><span class="accent">MODULE DATA</span><span class="eyebrow-line"></span></div>
+        <div class="panel-title-row">
+          <h2 class="panel-title">参数详情</h2>
+          <div class="panel-count">R<span style="font-size:16px;color:#7d8f96">01</span><small>SPEC</small></div>
+        </div>
+      </div>
+      <div id="detail-content" class="detail-scroll"></div>
+    </aside>
+
+    <section class="guide-card" aria-label="操作引导">
+      <div class="guide-head"><span>操作引导</span><span>CONTROL</span></div>
+      <div class="guide-items">
+        <span><b>拖拽</b> 旋转</span>
+        <span><b>滚轮</b> 缩放</span>
+        <span><b>悬停</b> 高亮名称</span>
+        <span><b>点击</b> 聚焦拆解</span>
+        <span><b>Esc</b> 取消聚焦</span>
+      </div>
+      <div id="guide-note" class="guide-note">再次点击同一部件归位；按逻辑顺序拆解。</div>
+    </section>
+
+
+    <div class="dock" role="toolbar" aria-label="装配操作">
+      <button id="explode-all" class="dock-button primary" type="button">
+        <span class="dock-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 3v5M12 16v5M4.4 7.7l4.2 2.5M15.4 13.8l4.2 2.5M4.4 16.3l4.2-2.5M15.4 10.2l4.2-2.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><rect x="9.6" y="9.6" width="4.8" height="4.8" rx="1" stroke="currentColor" stroke-width="1.2"/></svg>
+        </span>
+        <span class="dock-copy"><strong id="explode-label">全部拆解</strong></span>
+      </button>
+      <span class="dock-divider" aria-hidden="true"></span>
+      <button id="reset-all" class="dock-button" type="button">
+        <span class="dock-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 4v6h6M4.6 10A8 8 0 1 1 4.4 13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="dock-copy"><strong id="reset-label">全部复位</strong></span>
+      </button>
+      <span class="dock-divider" aria-hidden="true"></span>
+      <button id="auto-rotate" class="dock-button" type="button" aria-pressed="false">
+        <span class="dock-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M20 11a8 8 0 1 0-2.3 6.3M20 5v6h-6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="dock-copy"><strong>自动旋转</strong></span>
+      </button>
+    </div>
+
+    <div id="cursor-tip" class="cursor-tip" aria-hidden="true">
+      <span class="tip-dot"></span>
+      <span id="cursor-tip-name">部件</span>
+      <span id="cursor-tip-en" class="tip-en">PART</span>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite">
+      <span class="toast-icon">!</span>
+      <span id="toast-message"><strong>拆解顺序</strong> · 请先拆下前置部件</span>
+    </div>
+
+    <div id="boot" class="boot" role="status" aria-live="polite">
+      <div class="boot-inner">
+        <div class="boot-mark"><span id="boot-mark">ATX</span></div>
+        <div id="boot-title" class="boot-title">MOTHERBOARD</div>
+        <div id="boot-sub" class="boot-sub">程序化装配分解系统</div>
+        <div class="boot-progress"><span></span></div>
+        <div class="boot-status"><span id="boot-status-text">正在构建几何体</span><span>PROCEDURAL GEOMETRY</span></div>
+      </div>
+    </div>
+
+    <noscript><div class="noscript">本页面需要启用 JavaScript 以运行 Three.js 三维视图。</div></noscript>
+  </main>
+
+  <!-- Shared local Three.js r160 runtime: no CDN and no import map. -->
+  <script src="vendor/three.bundle.js?v=20261029-5"></script>
+  <script>window.THREE = window.ATX_LIB.THREE;</script>
+  <script src="models/env.js?v=20261029-5"></script>
+
+  <!-- Product-specific procedural builders. Configs reference these factories. -->
+  <script src="models/motherboard.js?v=20261029-5"></script>
+  <script src="models/desktop.js?v=20261029-5"></script>
+
+  <script type="module">
+    import { loadProduct } from "./js/loader.js?v=20261029-5";
+
+    const id = new URLSearchParams(location.search).get("id") || "motherboard";
+    loadProduct(id).catch((error) => {
+      console.error("[viewer]", error);
+      window.__VIEWER_READY__ = false;
+      const boot = document.getElementById("boot");
+      const status = document.getElementById("boot-status-text");
+      if (boot) boot.classList.add("is-error");
+      if (status) status.textContent = "加载失败：" + (error?.message || "未知错误");
+    });
+  </script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,290 @@
+[
+  {
+    "id": "cv550",
+    "name": "CV550 550W 80 PLUS Bronze",
+    "brand": "Corsair",
+    "specs": {
+      "额定功率": "550W",
+      "认证": "80 PLUS Bronze",
+      "规范": "ATX 2.31",
+      "风扇": "120mm"
+    },
+    "compat": {
+      "wattage": 550,
+      "standard": "ATX 2.31",
+      "connectors": {
+        "12vhpwr": 0,
+        "pcie8": 2,
+        "eps8": 1
+      }
+    },
+    "modelParams": {
+      "length": 125,
+      "fanSize": 120,
+      "modular": false,
+      "width": 150,
+      "height": 86,
+      "modularType": "none",
+      "interfaces": {
+        "atx24": 1,
+        "cpu8": 1,
+        "pcie8": 2,
+        "sata": 4
+      }
+    },
+    "price": 299,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "purepower12m-650",
+    "name": "Pure Power 12 M 650W",
+    "brand": "be quiet!",
+    "specs": {
+      "额定功率": "650W",
+      "认证": "80 PLUS Gold",
+      "规范": "ATX 3.0",
+      "风扇": "120mm"
+    },
+    "compat": {
+      "wattage": 650,
+      "standard": "ATX 3.0",
+      "connectors": {
+        "12vhpwr": 1,
+        "pcie8": 3,
+        "eps8": 2
+      }
+    },
+    "modelParams": {
+      "length": 160,
+      "fanSize": 120,
+      "modular": true,
+      "width": 150,
+      "height": 86,
+      "modularType": "full",
+      "interfaces": {
+        "atx24": 1,
+        "cpu8": 2,
+        "pcie8": 3,
+        "sata": 5
+      }
+    },
+    "price": 599,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "focus-gx750",
+    "name": "FOCUS GX-750 750W",
+    "brand": "Seasonic",
+    "specs": {
+      "额定功率": "750W",
+      "认证": "80 PLUS Gold",
+      "规范": "ATX 3.0",
+      "风扇": "135mm"
+    },
+    "compat": {
+      "wattage": 750,
+      "standard": "ATX 3.0",
+      "connectors": {
+        "12vhpwr": 1,
+        "pcie8": 4,
+        "eps8": 2
+      }
+    },
+    "modelParams": {
+      "length": 140,
+      "fanSize": 135,
+      "modular": true,
+      "width": 150,
+      "height": 86,
+      "modularType": "full",
+      "interfaces": {
+        "atx24": 1,
+        "cpu8": 2,
+        "pcie8": 4,
+        "sata": 6
+      }
+    },
+    "price": 799,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "rm850x-shift",
+    "name": "RM850x SHIFT 850W",
+    "brand": "Corsair",
+    "specs": {
+      "额定功率": "850W",
+      "认证": "80 PLUS Gold",
+      "规范": "ATX 3.0",
+      "风扇": "140mm"
+    },
+    "compat": {
+      "wattage": 850,
+      "standard": "ATX 3.0",
+      "connectors": {
+        "12vhpwr": 1,
+        "pcie8": 4,
+        "eps8": 2
+      }
+    },
+    "modelParams": {
+      "length": 180,
+      "fanSize": 140,
+      "modular": true,
+      "width": 150,
+      "height": 86,
+      "modularType": "full",
+      "interfaces": {
+        "atx24": 1,
+        "cpu8": 2,
+        "pcie8": 4,
+        "sata": 6
+      }
+    },
+    "price": 1099,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "thor-1000p2",
+    "name": "ROG Thor 1000W Platinum II",
+    "brand": "ASUS",
+    "specs": {
+      "额定功率": "1000W",
+      "认证": "80 PLUS Platinum",
+      "规范": "ATX 3.0",
+      "风扇": "135mm"
+    },
+    "compat": {
+      "wattage": 1000,
+      "standard": "ATX 3.0",
+      "connectors": {
+        "12vhpwr": 1,
+        "pcie8": 4,
+        "eps8": 2
+      }
+    },
+    "modelParams": {
+      "length": 160,
+      "fanSize": 135,
+      "modular": true,
+      "width": 150,
+      "height": 86,
+      "modularType": "full",
+      "interfaces": {
+        "atx24": 1,
+        "cpu8": 2,
+        "pcie8": 6,
+        "sata": 6
+      }
+    },
+    "price": 1999,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "cx450",
+    "name": "CX450 450W 80 PLUS Bronze",
+    "brand": "Corsair",
+    "specs": {
+      "额定功率": "450W",
+      "认证": "80 PLUS Bronze",
+      "规范": "ATX 2.31",
+      "风扇": "120mm"
+    },
+    "compat": {
+      "wattage": 450,
+      "standard": "ATX 2.31",
+      "connectors": {
+        "12vhpwr": 0,
+        "pcie8": 2,
+        "eps8": 1
+      }
+    },
+    "modelParams": {
+      "length": 125,
+      "fanSize": 120,
+      "modular": false,
+      "width": 150,
+      "height": 86,
+      "modularType": "none",
+      "interfaces": {
+        "atx24": 1,
+        "cpu8": 1,
+        "pcie8": 2,
+        "sata": 4
+      }
+    },
+    "price": 269,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "systempower10-550",
+    "name": "System Power 10 550W",
+    "brand": "be quiet!",
+    "specs": {
+      "额定功率": "550W",
+      "认证": "80 PLUS Bronze",
+      "规范": "ATX 2.52",
+      "风扇": "120mm"
+    },
+    "compat": {
+      "wattage": 550,
+      "standard": "ATX 2.52",
+      "connectors": {
+        "12vhpwr": 0,
+        "pcie8": 2,
+        "eps8": 1
+      }
+    },
+    "modelParams": {
+      "length": 140,
+      "fanSize": 120,
+      "modular": false,
+      "width": 150,
+      "height": 86,
+      "modularType": "none",
+      "interfaces": {
+        "atx24": 1,
+        "cpu8": 1,
+        "pcie8": 2,
+        "sata": 5
+      }
+    },
+    "price": 349,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "hydro-k500",
+    "name": "Hydro K 500W",
+    "brand": "FSP",
+    "specs": {
+      "额定功率": "500W",
+      "认证": "80 PLUS Bronze",
+      "规范": "ATX 2.52",
+      "风扇": "120mm"
+    },
+    "compat": {
+      "wattage": 500,
+      "standard": "ATX 2.52",
+      "connectors": {
+        "12vhpwr": 0,
+        "pcie8": 2,
+        "eps8": 1
+      }
+    },
+    "modelParams": {
+      "length": 150,
+      "fanSize": 120,
+      "modular": false,
+      "width": 150,
+      "height": 86,
+      "modularType": "none",
+      "interfaces": {
+        "atx24": 1,
+        "cpu8": 1,
+        "pcie8": 2,
+        "sata": 4
+      }
+    },
+    "price": 299,
+    "fidelity": "proportional"
+  }
+]

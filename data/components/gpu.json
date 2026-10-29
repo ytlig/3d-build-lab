@@ -1,0 +1,246 @@
+[
+  {
+    "id": "rtx4070fe",
+    "name": "GeForce RTX 4070 Founders Edition",
+    "brand": "NVIDIA",
+    "specs": {
+      "显存": "12GB GDDR6X",
+      "功耗": "200W",
+      "长度": "244mm",
+      "插槽": "PCIe 4.0 x16",
+      "散热": "双风扇"
+    },
+    "compat": {
+      "slot": "PCIe 4.0 x16",
+      "minPsuWatt": 650,
+      "maxCaseLength": 244,
+      "powerWatt": 200,
+      "pcie8": 1
+    },
+    "modelParams": {
+      "length": 244,
+      "thickness": 2,
+      "fanCount": 2,
+      "hasBackplate": true
+    },
+    "price": 4499,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "rtx4070tis_tuf",
+    "name": "TUF Gaming GeForce RTX 4070 Ti SUPER",
+    "brand": "ASUS",
+    "specs": {
+      "显存": "16GB GDDR6X",
+      "功耗": "285W",
+      "长度": "305mm",
+      "插槽": "PCIe 4.0 x16",
+      "散热": "三风扇"
+    },
+    "compat": {
+      "slot": "PCIe 4.0 x16",
+      "minPsuWatt": 750,
+      "maxCaseLength": 305,
+      "powerWatt": 285,
+      "pcie8": 0
+    },
+    "modelParams": {
+      "length": 305,
+      "thickness": 3.1,
+      "fanCount": 3,
+      "hasBackplate": true
+    },
+    "price": 6499,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "rtx4060ti_gamingx",
+    "name": "GeForce RTX 4060 Ti GAMING X SLIM 8G",
+    "brand": "MSI",
+    "specs": {
+      "显存": "8GB GDDR6",
+      "功耗": "160W",
+      "长度": "247mm",
+      "插槽": "PCIe 4.0 x8",
+      "散热": "双风扇"
+    },
+    "compat": {
+      "slot": "PCIe 4.0 x8",
+      "minPsuWatt": 550,
+      "maxCaseLength": 247,
+      "powerWatt": 160,
+      "pcie8": 1
+    },
+    "modelParams": {
+      "length": 247,
+      "thickness": 2,
+      "fanCount": 2,
+      "hasBackplate": true
+    },
+    "price": 3299,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "rx7800xt_nitro",
+    "name": "NITRO+ Radeon RX 7800 XT 16G",
+    "brand": "Sapphire",
+    "specs": {
+      "显存": "16GB GDDR6",
+      "功耗": "263W",
+      "长度": "320mm",
+      "插槽": "PCIe 4.0 x16",
+      "散热": "三风扇"
+    },
+    "compat": {
+      "slot": "PCIe 4.0 x16",
+      "minPsuWatt": 700,
+      "maxCaseLength": 320,
+      "powerWatt": 263,
+      "pcie8": 2
+    },
+    "modelParams": {
+      "length": 320,
+      "thickness": 3,
+      "fanCount": 3,
+      "hasBackplate": true
+    },
+    "price": 4599,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "rtx4090_strix",
+    "name": "ROG Strix GeForce RTX 4090 OC Edition",
+    "brand": "ASUS",
+    "specs": {
+      "显存": "24GB GDDR6X",
+      "功耗": "450W",
+      "长度": "357.6mm",
+      "插槽": "PCIe 4.0 x16",
+      "散热": "三风扇"
+    },
+    "compat": {
+      "slot": "PCIe 4.0 x16",
+      "minPsuWatt": 850,
+      "maxCaseLength": 358,
+      "powerWatt": 450,
+      "requires12vhpwr": true,
+      "pcie8": 0
+    },
+    "modelParams": {
+      "length": 357.6,
+      "thickness": 3.5,
+      "fanCount": 3,
+      "hasBackplate": true
+    },
+    "price": 15999,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "rtx4080s_tuf",
+    "name": "TUF Gaming GeForce RTX 4080 SUPER OC",
+    "brand": "ASUS",
+    "specs": {
+      "显存": "16GB GDDR6X",
+      "功耗": "320W",
+      "长度": "348mm",
+      "插槽": "PCIe 4.0 x16",
+      "散热": "三风扇"
+    },
+    "compat": {
+      "slot": "PCIe 4.0 x16",
+      "minPsuWatt": 850,
+      "maxCaseLength": 348,
+      "powerWatt": 320,
+      "pcie8": 0
+    },
+    "modelParams": {
+      "length": 348,
+      "thickness": 3.65,
+      "fanCount": 3,
+      "hasBackplate": true
+    },
+    "price": 8999,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "rx7900xtx_reddevil",
+    "name": "Red Devil Radeon RX 7900 XTX 24G",
+    "brand": "PowerColor",
+    "specs": {
+      "显存": "24GB GDDR6",
+      "功耗": "355W",
+      "长度": "348mm",
+      "插槽": "PCIe 4.0 x16",
+      "散热": "三风扇"
+    },
+    "compat": {
+      "slot": "PCIe 4.0 x16",
+      "minPsuWatt": 800,
+      "maxCaseLength": 348,
+      "powerWatt": 355,
+      "pcie8": 2
+    },
+    "modelParams": {
+      "length": 348,
+      "thickness": 3.5,
+      "fanCount": 3,
+      "hasBackplate": true
+    },
+    "price": 7999,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "rtx4060_solo",
+    "name": "Gaming GeForce RTX 4060 Solo 8G",
+    "brand": "ZOTAC",
+    "specs": {
+      "显存": "8GB GDDR6",
+      "功耗": "115W",
+      "长度": "170mm",
+      "插槽": "PCIe 4.0 x8",
+      "散热": "单风扇"
+    },
+    "compat": {
+      "slot": "PCIe 4.0 x8",
+      "minPsuWatt": 500,
+      "maxCaseLength": 170,
+      "powerWatt": 115,
+      "pcie8": 1
+    },
+    "modelParams": {
+      "length": 170,
+      "thickness": 2,
+      "fanCount": 1,
+      "hasBackplate": false
+    },
+    "price": 2199,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "rx6400_pulse",
+    "name": "PULSE Radeon RX 6400 4G",
+    "brand": "Sapphire",
+    "specs": {
+      "显存": "4GB GDDR6",
+      "功耗": "53W",
+      "长度": "165mm",
+      "插槽": "PCIe 4.0 x4",
+      "散热": "单风扇"
+    },
+    "compat": {
+      "slot": "PCIe 4.0 x4",
+      "minPsuWatt": 350,
+      "maxCaseLength": 165,
+      "powerWatt": 53,
+      "pcie8": 0
+    },
+    "modelParams": {
+      "length": 165,
+      "thickness": 1.5,
+      "fanCount": 1,
+      "hasBackplate": false
+    },
+    "price": 999,
+    "fidelity": "proportional"
+  }
+]

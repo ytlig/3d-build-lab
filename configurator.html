@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#04080a">
+  <meta name="description" content="装机配置器：选择显卡、CPU、主板、散热器、内存、电源、机箱风扇与机箱，实时查看参数、兼容性检查与整机装配预览。">
+  <link rel="icon" href="data:,">
+  <title>装机配置器 · PC WORKBENCH</title>
+  <link rel="stylesheet" href="css/configurator.css?v=20261029-5">
+</head>
+<body>
+  <div class="atmosphere" aria-hidden="true">
+    <span class="glow glow-cyan"></span>
+    <span class="glow glow-amber"></span>
+    <span class="stage-grid"></span>
+    <span class="stage-noise"></span>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="返回产品库">
+      <span class="brand-mark back-mark" aria-hidden="true">←</span>
+      <span class="brand-divider"></span>
+      <span class="brand-copy">
+        <strong>BUILD CONFIGURATOR</strong>
+        <small>装机配置器 · 兼容与价格</small>
+      </span>
+    </a>
+    <div class="top-actions">
+      <button id="saved-config-button" class="saved-config-button" type="button">已保存的配置</button>
+    </div>
+  </header>
+
+  <main class="config-main">
+    <section class="config-hero">
+      <div class="hero-eyebrow"><span>SYSTEM BUILDER</span><span class="hero-rule"></span></div>
+      <h1>组装一台<em>合适的电脑</em></h1>
+    </section>
+
+    <section id="preset-strip" class="preset-strip" aria-label="用途预设" hidden>
+      <div class="preset-strip-head">
+        <span class="eyebrow"><span class="accent">QUICK START</span><span class="eyebrow-line"></span><span>用途预设</span></span>
+        <button id="preset-undo" class="preset-undo" type="button" hidden>撤销预设</button>
+      </div>
+      <div id="preset-list" class="preset-list"></div>
+    </section>
+
+    <div class="config-grid">
+      <aside class="panel category-panel" aria-label="配件品类">
+        <div class="panel-head">
+          <div class="eyebrow"><span class="accent">COMPONENT TYPES</span><span class="eyebrow-line"></span></div>
+          <div class="panel-title-row">
+            <h2 class="panel-title">配件品类</h2>
+            <span id="category-count" class="panel-count">09</span>
+          </div>
+        </div>
+        <div id="category-list" class="category-list" aria-label="选择配件品类"></div>
+
+      </aside>
+
+      <section class="panel catalog-panel" aria-label="配件型号">
+        <div class="panel-head catalog-head">
+          <div>
+            <div class="eyebrow"><span class="accent">SELECT COMPONENT</span><span class="eyebrow-line"></span></div>
+            <div class="panel-title-row">
+              <h2 id="category-title" class="panel-title">显卡</h2>
+              <span id="catalog-count" class="catalog-count">—</span>
+            </div>
+          </div>
+          <div id="catalog-sub" class="catalog-sub"></div>
+        </div>
+        <div class="catalog-tools" aria-label="型号搜索和筛选">
+          <label class="catalog-search">
+            <span class="sr-only">搜索型号</span>
+            <input id="catalog-search" type="search" placeholder="搜索型号 / 品牌 / 参数…" autocomplete="off">
+          </label>
+          <label class="catalog-compatible">
+            <input id="catalog-compatible" type="checkbox">
+            <span>只看兼容</span>
+          </label>
+          <label class="catalog-sort">
+            <span class="sr-only">排序</span>
+            <select id="catalog-sort">
+              <option value="default">默认排序</option>
+              <option value="price-asc">价格从低到高</option>
+              <option value="price-desc">价格从高到低</option>
+              <option value="length-asc">长度从短到长</option>
+              <option value="length-desc">长度从长到短</option>
+              <option value="power-asc">功率从低到高</option>
+              <option value="power-desc">功率从高到低</option>
+            </select>
+          </label>
+          <button id="catalog-reset" class="catalog-reset" type="button">重置</button>
+        </div>
+        <div id="loading-state" class="loading-state" role="status">
+          <span class="loading-spinner"></span>
+          <span>正在读取配件数据…</span>
+        </div>
+        <div id="model-grid" class="model-grid" aria-label="可选型号" hidden></div>
+        <div id="empty-state" class="empty-state" hidden>当前品类暂无型号数据。</div>
+        <button id="custom-part-trigger" class="custom-part-trigger" type="button">
+          找不到型号？添加自定义配件
+        </button>
+      </section>
+
+      <aside class="panel summary-panel" aria-label="当前配置单">
+        <div class="panel-head">
+          <div class="eyebrow"><span class="accent">YOUR BUILD</span><span class="eyebrow-line"></span></div>
+          <div class="panel-title-row">
+            <h2 class="panel-title">配置单</h2>
+            <span id="selected-count" class="selected-count">0 / 9</span>
+          </div>
+          <div id="compat-top-counts" class="compat-top-counts" aria-live="polite"></div>
+        </div>
+
+        <div class="summary-scroll">
+          <div id="selection-list" class="selection-list"></div>
+
+          <button id="preview-jump" class="preview-jump" type="button" hidden>查看整机装配预览</button>
+
+          <section class="compatibility" aria-live="polite">
+            <div class="compatibility-head">
+              <span class="eyebrow"><span class="accent">COMPATIBILITY</span><span class="eyebrow-line"></span></span>
+              <span id="compat-state" class="compat-state is-pending">待选择</span>
+            </div>
+            <div id="compat-overall" class="compat-overall is-pending">
+              <span class="compat-dot"></span>
+              <div>
+                <strong>继续选择配件</strong>
+                <small>边选边检查兼容性，未填写的字段显示「待确认」。</small>
+              </div>
+            </div>
+            <div id="compat-list" class="compat-list"></div>
+            <button id="compat-toggle" class="compat-toggle" type="button" aria-expanded="false">查看全部 18 项</button>
+            <div class="compat-note">
+              <span class="data-disclaimer">数据版本 2026-10 · 参数与价格仅供参考，未覆盖所有物理细节；自定义件未审核；3D 外观为示意。</span>
+            </div>
+          </section>
+        </div>
+        <div class="summary-tools">
+          <button id="clear-build" class="text-button" type="button">清空配置</button>
+          <button id="build-undo" class="text-button" type="button" hidden>撤销清空</button>
+        </div>
+        <section class="build-actions" aria-label="保存、分享与导出">
+          <div class="build-actions-head">
+            <span class="eyebrow"><span class="accent">SAVE / SHARE</span><span class="eyebrow-line"></span></span>
+            <span id="build-save-state" class="build-save-state">自动保存到本机</span>
+          </div>
+          <div class="build-action-row">
+            <button id="copy-share" class="action-button" type="button" disabled>复制分享链接</button>
+            <button id="copy-export" class="action-button" type="button" disabled>复制配置单</button>
+          </div>
+        </section>
+        <div class="total-row">
+          <span>参考总价<small>以实际报价为准</small></span>
+          <strong id="total-price">¥ 0</strong>
+        </div>
+      </aside>
+
+    <section id="gpu-preview-panel" class="panel gpu-preview-panel" aria-label="整机装配预览">
+      <div class="gpu-preview-head">
+        <div>
+          <div class="eyebrow"><span class="accent">LIVE BUILD</span><span class="eyebrow-line"></span></div>
+          <div class="panel-title-row">
+            <h2 class="panel-title">整机装配预览</h2>
+            <span id="preview-state" class="preview-state">未选择</span>
+          </div>
+        </div>
+      </div>
+      <div class="gpu-preview-body">
+        <div id="gpu-preview-stage" class="gpu-preview-stage">
+          <canvas id="gpu-preview-canvas" aria-label="整机装配 3D 预览"></canvas>
+          <span class="preview-fidelity-note">3D 外观与灯效为示意，尺寸按真实参数生成</span>
+          <span id="preview-custom-note" class="preview-custom-note" hidden>含自定义件 · 未建模</span>
+          <div id="gpu-preview-empty" class="gpu-preview-empty">
+            <span class="preview-empty-mark">整机</span>
+            <strong>选择机箱与整机配件</strong>
+            <small>选齐配件后，这里会显示整机装配。</small>
+          </div>
+          <span class="preview-hint">拖拽旋转 · 滚轮缩放</span>
+        </div>
+        <aside class="gpu-preview-side">
+          <span class="eyebrow"><span class="accent">SELECTED GPU</span><span class="eyebrow-line"></span></span>
+          <h3 id="preview-gpu-name">未选择显卡</h3>
+          <span id="preview-gpu-brand" class="preview-brand">选择显卡后显示参数</span>
+          <div class="preview-spec-grid">
+            <div><span>长度</span><strong id="preview-length">—</strong></div>
+            <div><span>厚度</span><strong id="preview-thickness">—</strong></div>
+            <div><span>风扇数</span><strong id="preview-fans">—</strong></div>
+            <div><span>背板</span><strong id="preview-backplate">—</strong></div>
+          </div>
+
+          <div class="preview-case-block">
+            <span class="eyebrow"><span class="accent">CASE / FIT</span><span class="eyebrow-line"></span></span>
+            <strong id="preview-case-name">未选择机箱</strong>
+            <span id="preview-case-meta" class="preview-case-meta">选择机箱后可检查显卡长度</span>
+            <span id="preview-mb-meta" class="preview-board-meta">主板：未选择</span>
+            <div id="preview-fit" class="preview-fit is-idle">
+              <span id="preview-fit-state">等待装配</span>
+              <small id="preview-fit-detail">同时选择机箱与显卡进入装配检查。</small>
+            </div>
+            <div class="preview-cooler-line">
+              <span class="eyebrow"><span class="accent">COOLER / HEIGHT</span><span class="eyebrow-line"></span></span>
+              <strong id="preview-cooler-name">未选择散热器</strong>
+              <span id="preview-cooler-meta" class="preview-case-meta">选择散热器后检查机箱限高</span>
+            </div>
+            <div id="preview-cooler-fit" class="preview-fit is-idle">
+              <span id="preview-cooler-fit-state">无散热器</span>
+              <small id="preview-cooler-fit-detail">散热器高度必须小于机箱限高。</small>
+            </div>
+            <div class="preview-full-block">
+              <span id="preview-psu-meta" class="preview-build-line">电源：未选择</span>
+              <span id="preview-memory-meta" class="preview-build-line">内存：未选择</span>
+              <span id="preview-storage-meta" class="preview-build-line">存储：未选择</span>
+              <span id="preview-fans-meta" class="preview-build-line">机箱风扇：未选择</span>
+              <span id="preview-cables-meta" class="preview-build-line">走线：未连接</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+    </div>
+
+  </main>
+
+  <dialog id="custom-part-dialog" class="custom-dialog" aria-labelledby="custom-dialog-title">
+    <form id="custom-part-form" method="dialog" novalidate>
+      <header class="custom-dialog-head">
+        <span class="eyebrow"><span class="accent">CUSTOM PART</span><span class="eyebrow-line"></span><span>未审核</span></span>
+        <h2 id="custom-dialog-title">添加自定义配件</h2>
+        <p>只填写兼容计算需要的字段；留空表示未知，相关检查会显示「待确认」。</p>
+      </header>
+      <div id="custom-fields" class="custom-fields"></div>
+      <p id="custom-form-error" class="custom-form-error" hidden></p>
+      <div class="custom-dialog-actions">
+        <button id="custom-cancel" class="text-button" type="button">取消</button>
+        <button class="action-button" type="submit">保存并选择</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="share-choice-dialog" class="share-choice-dialog" aria-labelledby="share-choice-title">
+    <form method="dialog">
+      <header>
+        <span class="eyebrow"><span class="accent">SHARE BUILD</span><span class="eyebrow-line"></span><span>含自定义件</span></span>
+        <h2 id="share-choice-title">怎么分享？</h2>
+        <p id="share-choice-copy">这份配置包含自定义件，接收方需要导入后才能完整复现。</p>
+      </header>
+      <div class="share-choice-actions">
+        <button class="action-button" type="button" data-share-mode="with-custom">分享含自定义件的配置</button>
+        <button class="text-button" type="button" data-share-mode="official-only">只分享官方配件</button>
+      </div>
+      <footer><button id="share-choice-cancel" class="text-button" type="button">取消</button></footer>
+    </form>
+  </dialog>
+
+  <dialog id="saved-config-dialog" class="saved-config-dialog" aria-labelledby="saved-config-title">
+    <form method="dialog">
+      <header class="saved-config-head">
+        <span class="eyebrow"><span class="accent">LOCAL BUILDS</span><span class="eyebrow-line"></span><span>仅本机</span></span>
+        <h2 id="saved-config-title">本机保存的配置列表</h2>
+        <p>仅保存在这台设备，不会同步到其他设备或浏览器。</p>
+      </header>
+
+      <div class="saved-config-actions">
+        <button id="saved-config-save" class="action-button" type="button">保存当前配置</button>
+        <button id="saved-config-export" class="text-button" type="button">导出本机配置</button>
+        <button id="saved-config-import" class="text-button" type="button">导入配置</button>
+        <input id="saved-config-file" type="file" accept="application/json" hidden>
+      </div>
+      <div class="saved-config-head">
+        <span>已保存配置</span>
+        <small id="saved-config-count"></small>
+      </div>
+      <div id="saved-config-list" class="saved-config-list"></div>
+
+      <footer class="saved-config-foot">
+        <button id="saved-config-close" class="text-button" type="button">关闭</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <dialog id="compare-dialog" class="compare-dialog" aria-labelledby="compare-title">
+    <form method="dialog">
+      <header class="compare-head">
+        <span class="eyebrow"><span class="accent">COMPARE BUILDS</span><span class="eyebrow-line"></span><span>本机对比</span></span>
+        <h2 id="compare-title">配置对比</h2>
+        <p id="compare-summary">当前配置 vs 本机保存的配置</p>
+      </header>
+      <div id="compare-body" class="compare-body"></div>
+      <footer class="compare-foot">
+        <button id="compare-close" class="text-button" type="button">关闭</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <div id="config-toast" class="config-toast" role="status" aria-live="polite">
+    <span class="toast-led">!</span>
+    <span id="config-toast-text"></span>
+  </div>
+
+  <noscript><div class="noscript">需要启用 JavaScript 才能读取配件 JSON 并运行配置器。</div></noscript>
+
+  <script src="vendor/three.bundle.js?v=20261029-5"></script>
+  <script src="models/env.js?v=20261029-5"></script>
+  <script type="module" src="js/configurator.js?v=20261029-5"></script>
+</body>
+</html>

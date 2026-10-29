@@ -1,0 +1,130 @@
+[
+  {
+    "id": "1080p",
+    "name": "1080p 游戏",
+    "description": "中端配置，预算友好",
+    "selection": {
+      "gpu": "rtx4060_solo",
+      "cpu": "i5-14600k",
+      "motherboard": "b760m-mortar",
+      "cooler": "peerless-assassin-120-se",
+      "memory": "fury-beast-5600c36",
+      "storage": "p3-plus-1tb",
+      "psu": "purepower12m-650",
+      "casefan": "p14-pwm-pst-2",
+      "case": "4000d-airflow"
+    }
+  },
+  {
+    "id": "2k",
+    "name": "2K 高刷",
+    "description": "2K 高刷，4070 Ti 级",
+    "selection": {
+      "gpu": "rtx4070tis_tuf",
+      "cpu": "i5-14600k",
+      "motherboard": "z790-a",
+      "cooler": "lt720",
+      "memory": "trident-z5-6000c30",
+      "storage": "sn850x-2tb",
+      "psu": "rm850x-shift",
+      "casefan": "ql120-rgb-3",
+      "case": "fractal-north"
+    }
+  },
+  {
+    "id": "sff",
+    "name": "小体积静音",
+    "description": "ITX 机箱，无 RGB",
+    "selection": {
+      "gpu": "rtx4060_solo",
+      "cpu": "i3-14100",
+      "motherboard": "b760i-strix",
+      "cooler": "nh-l9i-17xx",
+      "memory": "fury-beast-5600c36",
+      "storage": "p3-plus-1tb",
+      "psu": "cv550",
+      "casefan": "nf-a12x25-pwm",
+      "case": "sg13"
+    }
+  },
+  {
+    "id": "office",
+    "name": "办公轻量",
+    "description": "预算优先，办公够用",
+    "selection": {
+      "gpu": "rx6400_pulse",
+      "cpu": "i3-14100",
+      "motherboard": "b760m-prime",
+      "cooler": "nh-l9i-17xx",
+      "memory": "crucial-pro-5600c46",
+      "storage": "p3-plus-1tb",
+      "psu": "cx450",
+      "casefan": "p14-pwm-pst-2",
+      "case": "4000d-airflow"
+    }
+  },
+  {
+    "id": "4k",
+    "name": "4K 发烧",
+    "description": "旗舰卡 + 1000W",
+    "selection": {
+      "gpu": "rtx4090_strix",
+      "cpu": "i9-14900k",
+      "motherboard": "z790-aorus-elite",
+      "cooler": "lt720",
+      "memory": "dominator-48-7200c36",
+      "storage": "990-pro-2tb",
+      "psu": "thor-1000p2",
+      "casefan": "silent-wings-4-140-2",
+      "case": "meshify2xl"
+    }
+  },
+  {
+    "id": "creator",
+    "name": "创作生产力",
+    "description": "16 核 + 64GB",
+    "selection": {
+      "gpu": "rx7900xtx_reddevil",
+      "cpu": "r9-7950x",
+      "motherboard": "x670e-e",
+      "cooler": "coreliquid-280r",
+      "memory": "trident-z5-neo-64-6000c30",
+      "storage": "990-pro-2tb",
+      "psu": "rm850x-shift",
+      "casefan": "silent-wings-4-140-2",
+      "case": "7000d-airflow"
+    }
+  },
+  {
+    "id": "am5-game",
+    "name": "AMD 游戏",
+    "description": "3D 缓存 + A 卡",
+    "selection": {
+      "gpu": "rx7800xt_nitro",
+      "cpu": "r7-7800x3d",
+      "motherboard": "b650-tomahawk",
+      "cooler": "ak620",
+      "memory": "fury-beast-5600c36",
+      "storage": "sn850x-2tb",
+      "psu": "focus-gx750",
+      "casefan": "p14-pwm-pst-2",
+      "case": "h5-flow"
+    }
+  },
+  {
+    "id": "showcase",
+    "name": "海景房光效",
+    "description": "海景房 + 全套 RGB",
+    "selection": {
+      "gpu": "rtx4070fe",
+      "cpu": "i5-14600k",
+      "motherboard": "z790-a",
+      "cooler": "lt520",
+      "memory": "trident-z5-6000c30",
+      "storage": "sn850x-2tb",
+      "psu": "purepower12m-650",
+      "casefan": "ql120-rgb-3",
+      "case": "o11d-evo"
+    }
+  }
+]

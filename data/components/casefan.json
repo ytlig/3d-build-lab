@@ -1,0 +1,138 @@
+[
+  {
+    "id": "uni-fan-sl120-rgb-3",
+    "name": "UNI FAN SL120 RGB 3-Pack",
+    "brand": "Lian Li",
+    "specs": {
+      "尺寸": "120mm",
+      "数量": "3",
+      "RGB": "有",
+      "位置": "前面板 ×3"
+    },
+    "compat": {
+      "size": 120,
+      "quantity": 3,
+      "hasRgb": true
+    },
+    "modelParams": {
+      "size": 120,
+      "quantity": 3,
+      "hasRgb": true,
+      "positions": [
+        "front",
+        "front",
+        "front"
+      ]
+    },
+    "price": 699,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "p14-pwm-pst-2",
+    "name": "P14 PWM PST 2-Pack",
+    "brand": "ARCTIC",
+    "specs": {
+      "尺寸": "140mm",
+      "数量": "2",
+      "RGB": "无",
+      "位置": "前面板 ×2"
+    },
+    "compat": {
+      "size": 140,
+      "quantity": 2,
+      "hasRgb": false
+    },
+    "modelParams": {
+      "size": 140,
+      "quantity": 2,
+      "hasRgb": false,
+      "positions": [
+        "front",
+        "front"
+      ]
+    },
+    "price": 159,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "nf-a12x25-pwm",
+    "name": "NF-A12x25 PWM",
+    "brand": "Noctua",
+    "specs": {
+      "尺寸": "120mm",
+      "数量": "1",
+      "RGB": "无",
+      "位置": "前面板 ×1"
+    },
+    "compat": {
+      "size": 120,
+      "quantity": 1,
+      "hasRgb": false
+    },
+    "modelParams": {
+      "size": 120,
+      "quantity": 1,
+      "hasRgb": false,
+      "positions": [
+        "front"
+      ]
+    },
+    "price": 239,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "ql120-rgb-3",
+    "name": "QL120 RGB 3-Pack",
+    "brand": "Corsair",
+    "specs": {
+      "尺寸": "120mm",
+      "数量": "3",
+      "RGB": "有",
+      "位置": "前 / 顶 / 后"
+    },
+    "compat": {
+      "size": 120,
+      "quantity": 3,
+      "hasRgb": true
+    },
+    "modelParams": {
+      "size": 120,
+      "quantity": 3,
+      "hasRgb": true,
+      "positions": [
+        "front",
+        "top",
+        "rear"
+      ]
+    },
+    "price": 799,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "silent-wings-4-140-2",
+    "name": "Silent Wings 4 140mm 2-Pack",
+    "brand": "be quiet!",
+    "specs": {
+      "尺寸": "140mm",
+      "数量": "2",
+      "RGB": "无",
+      "位置": "顶部 ×2"
+    },
+    "compat": {
+      "size": 140,
+      "quantity": 2,
+      "hasRgb": false
+    },
+    "modelParams": {
+      "size": 140,
+      "quantity": 2,
+      "hasRgb": false,
+      "positions": [
+        "top",
+        "top"
+      ]
+    },
+    "price": 399,
+    "fidelity": "proportional"
+  }
+]

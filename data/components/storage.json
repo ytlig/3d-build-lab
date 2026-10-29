@@ -1,0 +1,138 @@
+[
+  {
+    "id": "990-pro-2tb",
+    "name": "990 PRO 2TB",
+    "brand": "Samsung",
+    "specs": {
+      "接口": "M.2 NVMe",
+      "容量": "2TB",
+      "协议": "PCIe 4.0 x4",
+      "顺序读取": "7450 MB/s"
+    },
+    "compat": {
+      "interface": "M.2",
+      "protocol": "NVMe",
+      "formFactor": "M.2 2280",
+      "capacityGB": 2000,
+      "m2Length": 2280,
+      "m2Key": "M"
+    },
+    "modelParams": {
+      "formFactor": "M.2 2280",
+      "length": 80,
+      "width": 22,
+      "height": 2.4,
+      "hasHeatsink": false
+    },
+    "price": 1099,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "sn850x-2tb",
+    "name": "WD_BLACK SN850X 2TB",
+    "brand": "Western Digital",
+    "specs": {
+      "接口": "M.2 NVMe",
+      "容量": "2TB",
+      "协议": "PCIe 4.0 x4",
+      "顺序读取": "7300 MB/s"
+    },
+    "compat": {
+      "interface": "M.2",
+      "protocol": "NVMe",
+      "formFactor": "M.2 2280",
+      "capacityGB": 2000,
+      "m2Length": 2280,
+      "m2Key": "M"
+    },
+    "modelParams": {
+      "formFactor": "M.2 2280",
+      "length": 80,
+      "width": 22,
+      "height": 2.4,
+      "hasHeatsink": false
+    },
+    "price": 999,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "p3-plus-1tb",
+    "name": "P3 Plus 1TB",
+    "brand": "Crucial",
+    "specs": {
+      "接口": "M.2 NVMe",
+      "容量": "1TB",
+      "协议": "PCIe 4.0 x4",
+      "顺序读取": "5000 MB/s"
+    },
+    "compat": {
+      "interface": "M.2",
+      "protocol": "NVMe",
+      "formFactor": "M.2 2280",
+      "capacityGB": 1000,
+      "m2Length": 2280,
+      "m2Key": "M"
+    },
+    "modelParams": {
+      "formFactor": "M.2 2280",
+      "length": 80,
+      "width": 22,
+      "height": 2.4,
+      "hasHeatsink": false
+    },
+    "price": 399,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "870-evo-1tb",
+    "name": "870 EVO 1TB",
+    "brand": "Samsung",
+    "specs": {
+      "接口": "SATA",
+      "容量": "1TB",
+      "协议": "SATA III",
+      "顺序读取": "560 MB/s"
+    },
+    "compat": {
+      "interface": "SATA",
+      "protocol": "SATA III",
+      "formFactor": "2.5 inch",
+      "capacityGB": 1000
+    },
+    "modelParams": {
+      "formFactor": "2.5 inch",
+      "length": 100,
+      "width": 70,
+      "height": 7,
+      "hasHeatsink": false
+    },
+    "price": 599,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "mx500-2tb",
+    "name": "MX500 2TB",
+    "brand": "Crucial",
+    "specs": {
+      "接口": "SATA",
+      "容量": "2TB",
+      "协议": "SATA III",
+      "顺序读取": "560 MB/s"
+    },
+    "compat": {
+      "interface": "SATA",
+      "protocol": "SATA III",
+      "formFactor": "2.5 inch",
+      "capacityGB": 2000
+    },
+    "modelParams": {
+      "formFactor": "2.5 inch",
+      "length": 100,
+      "width": 70,
+      "height": 7,
+      "hasHeatsink": false
+    },
+    "price": 899,
+    "fidelity": "proportional"
+  }
+]

@@ -1,0 +1,292 @@
+[
+  {
+    "id": "z790-a",
+    "name": "ROG STRIX Z790-A GAMING WIFI",
+    "brand": "ASUS",
+    "specs": {
+      "插槽": "LGA1700",
+      "内存": "DDR5",
+      "板型": "ATX",
+      "供电": "16 + 1 相"
+    },
+    "compat": {
+      "socket": "LGA1700",
+      "memoryType": "DDR5",
+      "formFactor": "ATX"
+    },
+    "modelParams": {
+      "formFactor": "ATX",
+      "length": 305,
+      "width": 244,
+      "m2Slots": 4,
+      "sataPorts": 4,
+      "m2Lengths": [
+        2280
+      ],
+      "m2Key": "M"
+    },
+    "price": 2499,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "b760m-mortar",
+    "name": "MAG B760M MORTAR WIFI II",
+    "brand": "MSI",
+    "specs": {
+      "插槽": "LGA1700",
+      "内存": "DDR5",
+      "板型": "M-ATX",
+      "供电": "12 + 1 相"
+    },
+    "compat": {
+      "socket": "LGA1700",
+      "memoryType": "DDR5",
+      "formFactor": "M-ATX"
+    },
+    "modelParams": {
+      "formFactor": "M-ATX",
+      "length": 244,
+      "width": 244,
+      "m2Slots": 2,
+      "sataPorts": 4,
+      "m2Lengths": [
+        2280
+      ],
+      "m2Key": "M"
+    },
+    "price": 1299,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "x670e-e",
+    "name": "ROG STRIX X670E-E GAMING WIFI",
+    "brand": "ASUS",
+    "specs": {
+      "插槽": "AM5",
+      "内存": "DDR5",
+      "板型": "ATX",
+      "供电": "18 + 2 相"
+    },
+    "compat": {
+      "socket": "AM5",
+      "memoryType": "DDR5",
+      "formFactor": "ATX"
+    },
+    "modelParams": {
+      "formFactor": "ATX",
+      "length": 305,
+      "width": 244,
+      "m2Slots": 4,
+      "sataPorts": 6,
+      "m2Lengths": [
+        2280
+      ],
+      "m2Key": "M"
+    },
+    "price": 3499,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "b650m-aorus",
+    "name": "B650M AORUS ELITE AX",
+    "brand": "GIGABYTE",
+    "specs": {
+      "插槽": "AM5",
+      "内存": "DDR5",
+      "板型": "M-ATX",
+      "供电": "12 + 2 + 1 相"
+    },
+    "compat": {
+      "socket": "AM5",
+      "memoryType": "DDR5",
+      "formFactor": "M-ATX"
+    },
+    "modelParams": {
+      "formFactor": "M-ATX",
+      "length": 244,
+      "width": 244,
+      "m2Slots": 2,
+      "sataPorts": 4,
+      "m2Lengths": [
+        2280
+      ],
+      "m2Key": "M"
+    },
+    "price": 1499,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "z790-aorus-elite",
+    "name": "Z790 AORUS ELITE AX",
+    "brand": "GIGABYTE",
+    "specs": {
+      "插槽": "LGA1700",
+      "内存": "DDR5",
+      "板型": "ATX",
+      "供电": "16 + 1 + 2 相"
+    },
+    "compat": {
+      "socket": "LGA1700",
+      "memoryType": "DDR5",
+      "formFactor": "ATX"
+    },
+    "modelParams": {
+      "formFactor": "ATX",
+      "length": 305,
+      "width": 244,
+      "m2Slots": 4,
+      "sataPorts": 4,
+      "m2Lengths": [
+        2280
+      ],
+      "m2Key": "M"
+    },
+    "price": 1899,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "b760m-prime",
+    "name": "PRIME B760M-A WIFI",
+    "brand": "ASUS",
+    "specs": {
+      "插槽": "LGA1700",
+      "内存": "DDR5",
+      "板型": "M-ATX",
+      "供电": "8 + 1 相"
+    },
+    "compat": {
+      "socket": "LGA1700",
+      "memoryType": "DDR5",
+      "formFactor": "M-ATX"
+    },
+    "modelParams": {
+      "formFactor": "M-ATX",
+      "length": 244,
+      "width": 244,
+      "m2Slots": 2,
+      "sataPorts": 4,
+      "m2Lengths": [
+        2280
+      ],
+      "m2Key": "M"
+    },
+    "price": 999,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "x670e-taichi",
+    "name": "X670E Taichi",
+    "brand": "ASRock",
+    "specs": {
+      "插槽": "AM5",
+      "内存": "DDR5",
+      "板型": "E-ATX",
+      "供电": "24 + 2 + 1 相"
+    },
+    "compat": {
+      "socket": "AM5",
+      "memoryType": "DDR5",
+      "formFactor": "E-ATX"
+    },
+    "modelParams": {
+      "formFactor": "E-ATX",
+      "length": 305,
+      "width": 267,
+      "m2Slots": 4,
+      "sataPorts": 8,
+      "m2Lengths": [
+        2280
+      ],
+      "m2Key": "M"
+    },
+    "price": 3999,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "b650-tomahawk",
+    "name": "MAG B650 TOMAHAWK WIFI",
+    "brand": "MSI",
+    "specs": {
+      "插槽": "AM5",
+      "内存": "DDR5",
+      "板型": "ATX",
+      "供电": "14 + 2 + 1 相"
+    },
+    "compat": {
+      "socket": "AM5",
+      "memoryType": "DDR5",
+      "formFactor": "ATX"
+    },
+    "modelParams": {
+      "formFactor": "ATX",
+      "length": 305,
+      "width": 244,
+      "m2Slots": 3,
+      "sataPorts": 6,
+      "m2Lengths": [
+        2280
+      ],
+      "m2Key": "M"
+    },
+    "price": 1699,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "b760i-strix",
+    "name": "ROG STRIX B760-I GAMING WIFI",
+    "brand": "ASUS",
+    "specs": {
+      "插槽": "LGA1700",
+      "内存": "DDR5",
+      "板型": "ITX",
+      "供电": "8 + 1 相"
+    },
+    "compat": {
+      "socket": "LGA1700",
+      "memoryType": "DDR5",
+      "formFactor": "ITX"
+    },
+    "modelParams": {
+      "formFactor": "ITX",
+      "length": 170,
+      "width": 170,
+      "m2Slots": 2,
+      "sataPorts": 4,
+      "m2Lengths": [
+        2280
+      ],
+      "m2Key": "M"
+    },
+    "price": 1699,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "b650i-lightning",
+    "name": "B650I Lightning WiFi",
+    "brand": "ASRock",
+    "specs": {
+      "插槽": "AM5",
+      "内存": "DDR5",
+      "板型": "ITX",
+      "供电": "8 + 2 + 1 相"
+    },
+    "compat": {
+      "socket": "AM5",
+      "memoryType": "DDR5",
+      "formFactor": "ITX"
+    },
+    "modelParams": {
+      "formFactor": "ITX",
+      "length": 170,
+      "width": 170,
+      "m2Slots": 2,
+      "sataPorts": 4,
+      "m2Lengths": [
+        2280
+      ],
+      "m2Key": "M"
+    },
+    "price": 1499,
+    "fidelity": "proportional"
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "id": "trident-z5-6000c30",
+    "name": "Trident Z5 RGB 32GB DDR5-6000 CL30",
+    "brand": "G.SKILL",
+    "specs": {
+      "类型": "DDR5",
+      "容量": "32GB (2×16GB)",
+      "频率": "6000 MT/s",
+      "时序": "CL30"
+    },
+    "compat": {
+      "memoryType": "DDR5",
+      "capacityGB": 32
+    },
+    "modelParams": {
+      "moduleCount": 2,
+      "height": 44,
+      "hasRgb": true
+    },
+    "price": 799,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "vengeance-6000c36",
+    "name": "Vengeance RGB 32GB DDR5-6000 CL36",
+    "brand": "Corsair",
+    "specs": {
+      "类型": "DDR5",
+      "容量": "32GB (2×16GB)",
+      "频率": "6000 MT/s",
+      "时序": "CL36"
+    },
+    "compat": {
+      "memoryType": "DDR5",
+      "capacityGB": 32
+    },
+    "modelParams": {
+      "moduleCount": 2,
+      "height": 45,
+      "hasRgb": true
+    },
+    "price": 749,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "fury-beast-5600c36",
+    "name": "FURY Beast 32GB DDR5-5600 CL36",
+    "brand": "Kingston",
+    "specs": {
+      "类型": "DDR5",
+      "容量": "32GB (2×16GB)",
+      "频率": "5600 MT/s",
+      "时序": "CL36"
+    },
+    "compat": {
+      "memoryType": "DDR5",
+      "capacityGB": 32
+    },
+    "modelParams": {
+      "moduleCount": 2,
+      "height": 34,
+      "hasRgb": false
+    },
+    "price": 599,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "crucial-pro-5600c46",
+    "name": "Pro 32GB DDR5-5600 CL46",
+    "brand": "Crucial",
+    "specs": {
+      "类型": "DDR5",
+      "容量": "32GB (2×16GB)",
+      "频率": "5600 MT/s",
+      "时序": "CL46"
+    },
+    "compat": {
+      "memoryType": "DDR5",
+      "capacityGB": 32
+    },
+    "modelParams": {
+      "moduleCount": 2,
+      "height": 32,
+      "hasRgb": false
+    },
+    "price": 549,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "trident-z5-neo-64-6000c30",
+    "name": "Trident Z5 Neo RGB 64GB DDR5-6000 CL30",
+    "brand": "G.SKILL",
+    "specs": {
+      "类型": "DDR5",
+      "容量": "64GB (2×32GB)",
+      "频率": "6000 MT/s",
+      "时序": "CL30"
+    },
+    "compat": {
+      "memoryType": "DDR5",
+      "capacityGB": 64
+    },
+    "modelParams": {
+      "moduleCount": 2,
+      "height": 44,
+      "hasRgb": true
+    },
+    "price": 1499,
+    "fidelity": "proportional"
+  },
+  {
+    "id": "dominator-48-7200c36",
+    "name": "Dominator Titanium 48GB DDR5-7200 CL36",
+    "brand": "Corsair",
+    "specs": {
+      "类型": "DDR5",
+      "容量": "48GB (2×24GB)",
+      "频率": "7200 MT/s",
+      "时序": "CL36"
+    },
+    "compat": {
+      "memoryType": "DDR5",
+      "capacityGB": 48
+    },
+    "modelParams": {
+      "moduleCount": 2,
+      "height": 45,
+      "hasRgb": true
+    },
+    "price": 1799,
+    "fidelity": "proportional"
+  }
+]
